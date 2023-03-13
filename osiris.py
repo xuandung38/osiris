@@ -52,10 +52,10 @@ class ServiceManager:
                         self.send_telegram_notification('Không thể khởi động lại {}.'.format(process_name))
             time.sleep(self.check_interval)
 
-class KathusService(win32serviceutil.ServiceFramework):
-    _svc_name_ = 'KathusService'
-    _svc_display_name_ = 'Kathus Service'
-    _svc_description_ = 'Dịch vụ kiểm tra xem các chương trình được chỉ định có đang chạy hay không và khởi động lại chúng nếu chương trình bị lỗi hoặc không chạy.'
+class OsirisService(win32serviceutil.ServiceFramework):
+    _svc_name_ = 'OsirisService'
+    _svc_display_name_ = 'Osiris Service'
+    _svc_description_ = 'Một dịch vụ kiểm tra xem các chương trình được chỉ định có đang chạy hay không và khởi động lại chúng nếu chương trình bị lỗi hoặc không chạy.'
 
     def __init__(self, args):
         super().__init__(args)
@@ -74,4 +74,4 @@ class KathusService(win32serviceutil.ServiceFramework):
         self.service_manager.run()
 
 if __name__ == '__main__':
-    win32serviceutil.HandleCommandLine(KathusService)
+    win32serviceutil.HandleCommandLine(OsirisService)

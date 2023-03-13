@@ -1,4 +1,4 @@
-# Kathus Service
+# Osiris Service
 *** Dịch vụ kiểm tra xem các chương trình được chỉ định có đang chạy hay không và khởi động lại chúng nếu chương trình bị lỗi hoặc không chạy. ***
 
 
@@ -12,4 +12,4 @@
 
 ### Step 3. Start service
 
-> python kathus.py
+> python osiris.py
